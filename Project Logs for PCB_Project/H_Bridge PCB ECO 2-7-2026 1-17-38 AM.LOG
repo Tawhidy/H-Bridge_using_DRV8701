@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=AVDD Pin=C2-1
+Change Component Footprint: Designator=C1 Old Footprint=FP-25MU105MA23216-MFG New Footprint=FP-25MU105MA23216-MFG
+Change Component Footprint: Designator=C2 Old Footprint=FP-25MU105MA23216-MFG New Footprint=FP-25MU105MA23216-MFG
+Change Component Footprint: Designator=C3 Old Footprint=FP-25MU105MA23216-MFG New Footprint=FP-25MU105MA23216-MFG
+Change Component Footprint: Designator=C8 Old Footprint=FP-25MU105MA23216-MFG New Footprint=FP-25MU105MA23216-MFG
+Change Component Footprint: Designator=C9 Old Footprint=FP-25MU105MA23216-MFG New Footprint=FP-25MU105MA23216-MFG
+Change Component Footprint: Designator=C4 Old Footprint=FP-ECHU_X_E2-MFG New Footprint=FP-ECHU_X_E2-MFG
+Change Component Footprint: Designator=C6 Old Footprint=FP-ECHU_X_E2-MFG New Footprint=FP-ECHU_X_E2-MFG
+Added Pin To Net: NetName=AVDD Pin=C1-1
+Change Net Name : Old Net Name=GND New Net Name=SN
+Change Net Name : Old Net Name=NetC3_1 New Net Name=VCP
+Change Net Name : Old Net Name=NetC4_1 New Net Name=CPH
+Change Net Name : Old Net Name=NetR2_2 New Net Name=nSLEEP
+Added Pin To Net: NetName=DVDD Pin=C2-1
+Added Pin To Net: NetName=DVDD Pin=U1-7
+Added Net: Name=DVDD

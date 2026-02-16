@@ -1,0 +1,57 @@
+Removed Pin From Net: NetName=PWM Pin=J2-2
+Removed Pin From Net: NetName=DIR Pin=J2-4
+Removed Pin From Net: NetName=VM Pin=J2-6
+Removed Pin From Net: NetName=+5 Pin=J2-8
+Removed Pin From Net: NetName=GND Pin=J2-10
+Removed Pin From Net: NetName=FAULT Pin=J2-12
+Removed Member From Class: ClassName=H_Bridge1 Member=J2
+Added Component: Designator=P1(SMTC-MTSW-106-09-X-S-540)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.samtec.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.samtec.com/documents/webfiles/pdf/MTSW.PDF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.samtec.com/documents/webfiles/cpdf/MTSW-XXX-XX-X-X-XXXX-XX-XXX-MKT1.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "F-214"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Samtec"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Through-hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Assembly .025" [.64] SQ Post Terminal Strip"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "MTSW-106-09-X-S-540"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "BI, 2/1987"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "MTSW-106-09-T-S-540"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.54 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "True"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range"; Value = "-55 to 105 degC"; VariantName = "[No Variations]"
+Added Component: Designator=P2(SMTC-MTSW-106-09-X-S-540)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.samtec.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.samtec.com/documents/webfiles/pdf/MTSW.PDF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.samtec.com/documents/webfiles/cpdf/MTSW-XXX-XX-X-X-XXXX-XX-XXX-MKT1.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "F-214"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Samtec"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Through-hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Vertical"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Assembly .025" [.64] SQ Post Terminal Strip"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "MTSW-106-09-X-S-540"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "BI, 2/1987"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "MTSW-106-09-T-S-540"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.54 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "True"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range"; Value = "-55 to 105 degC"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+5 Pin=P1-1
+Added Pin To Net: NetName=GND Pin=P1-2
+Added Pin To Net: NetName=PWM Pin=P1-3
+Added Pin To Net: NetName=GND Pin=P1-4
+Added Pin To Net: NetName=DIR Pin=P1-5
+Added Pin To Net: NetName=FAULT Pin=P1-6
+Added Pin To Net: NetName=VM Pin=P2-1
+Added Pin To Net: NetName=VM Pin=P2-2
+Added Pin To Net: NetName=VM Pin=P2-3
+Added Pin To Net: NetName=GND Pin=P2-4
+Added Pin To Net: NetName=GND Pin=P2-5
+Added Pin To Net: NetName=GND Pin=P2-6
+Added Member To Class: ClassName=H_Bridge1 Member=Component P1 MTSW-106-09-T-S-540
+Added Member To Class: ClassName=H_Bridge1 Member=Component P2 MTSW-106-09-T-S-540

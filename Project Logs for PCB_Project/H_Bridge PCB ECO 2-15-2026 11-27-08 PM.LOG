@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=GND Pin=R1-1
+Removed Pin From Net: NetName=IDRIVE Pin=R1-2
+Change Component Footprint: Designator=R1 Old Footprint=FP-RN731J-MFG New Footprint=RESC3216X60X45ML15T20
+Change Component Comment : Designator=R1 Old Comment=RN73C1J1K91BTDF New Comment=33K
+Change Managed Component Library Link : Designator=R1 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B395A458-254D-4096-9FE7-9C62655D809C Old ItemGUID=62705AD4-DC6C-4F2A-9890-1409521809C4 New ItemGUID=1793A2CC-AE4C-4A92-B8E0-9F0E9F08CB40 Old RevisionGUID=73430CE9-AA7E-412D-B51D-83C948DACCB1 New RevisionGUID=C1A0B46C-A3BB-4C87-896F-4D5D24664ED4
+Change component parameters: Designator = "R1" ("R1"); Footprint = "FP-RN731J-MFG"; UniqueID = "\WSMTOOPM" ("\WSMTOOPM")
+Change component parameters (AddParameter): Name = "Case/Package"; Value = "1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "155°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-55°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "SM"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pins"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "250mW"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS Compliant"; Value = "True"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "200V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=IDRIVE Pin=R1-1
+Added Pin To Net: NetName=GND Pin=R1-2

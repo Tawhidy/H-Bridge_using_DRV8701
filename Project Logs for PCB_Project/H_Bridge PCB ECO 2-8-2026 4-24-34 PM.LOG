@@ -1,0 +1,10 @@
+Added Component: Designator=J1(AMASS_XT60-M)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/XT60-M/AMASS/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "AMASS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "XT60-M"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Package"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/XT60-M/AMASS/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=OUT1 Pin=J1-N
+Added Pin To Net: NetName=OUT2 Pin=J1-P
+Added Member To Class: ClassName=H_Bridge1 Member=Component J1 XT60-M

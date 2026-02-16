@@ -1,0 +1,9 @@
+Change Component Footprint: Designator=C1 Old Footprint=FP-25MU105MA23216-MFG New Footprint=FP-25MU105MA23216-MFG
+Change Component Footprint: Designator=C2 Old Footprint=FP-25MU105MA23216-MFG New Footprint=FP-25MU105MA23216-MFG
+Change Component Footprint: Designator=C3 Old Footprint=FP-25MU105MA23216-MFG New Footprint=FP-25MU105MA23216-MFG
+Change Component Footprint: Designator=C8 Old Footprint=FP-25MU105MA23216-MFG New Footprint=FP-25MU105MA23216-MFG
+Change Component Footprint: Designator=C9 Old Footprint=FP-25MU105MA23216-MFG New Footprint=FP-25MU105MA23216-MFG
+Change Component Footprint: Designator=C4 Old Footprint=FP-ECHU_X_E2-MFG New Footprint=FP-ECHU_X_E2-MFG
+Change Component Footprint: Designator=C6 Old Footprint=FP-ECHU_X_E2-MFG New Footprint=FP-ECHU_X_E2-MFG
+Change Pin Designator/Name:  Old Designator=U1-7 Old Name=AVDD New Designator =DVDD New Name=8
+Change Pin Designator/Name:  Old Designator=U1-8 Old Name=DVDD New Designator =AVDD New Name=7

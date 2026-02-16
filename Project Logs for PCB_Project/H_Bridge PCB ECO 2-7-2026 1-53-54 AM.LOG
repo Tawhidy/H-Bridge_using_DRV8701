@@ -1,0 +1,46 @@
+Removed Pin From Net: NetName=AVDD Pin=C1-1
+Removed Pin From Net: NetName=SN Pin=C1-2
+Removed Pin From Net: NetName=DVDD Pin=C2-1
+Removed Pin From Net: NetName=SN Pin=C2-2
+Removed Pin From Net: NetName=VM Pin=C8-1
+Removed Pin From Net: NetName=SN Pin=C8-2
+Removed Pin From Net: NetName=VM Pin=C9-1
+Removed Pin From Net: NetName=SN Pin=C9-2
+Change Component Footprint: Designator=C1 Old Footprint=FP-25MU105MA23216-MFG New Footprint=CAPC2013X145X50NL20T20
+Change Component Footprint: Designator=C2 Old Footprint=FP-25MU105MA23216-MFG New Footprint=CAPC2013X145X50NL20T20
+Change Component Footprint: Designator=C8 Old Footprint=FP-25MU105MA23216-MFG New Footprint=CAPC2013X145X50NL20T20
+Change Component Footprint: Designator=C9 Old Footprint=FP-25MU105MA23216-MFG New Footprint=CAPC2013X145X50NL20T20
+Change Component Footprint: Designator=C6 Old Footprint=FP-ECHU_X_E2-MFG New Footprint=FP-0402-L_1_0_1-W_0_5_0_1-IPC_C
+Change Component Comment : Designator=C1 Old Comment=1uF/50V New Comment=1uF/35V
+Change Component Comment : Designator=C2 Old Comment=1uF/50V New Comment=1uF/35V
+Change Component Comment : Designator=C8 Old Comment=1uF/50V New Comment=1uF/35V
+Change Component Comment : Designator=C9 Old Comment=1uF/50V New Comment=1uF/35V
+Change Component Comment : Designator=C5 Old Comment=10uF/50V New Comment=10uF/35V
+Change Component Comment : Designator=C6 Old Comment=100nF/50V New Comment=100nF/35V
+Change Managed Component Library Link : Designator=C1 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=76589A48-4E5C-4E0D-87AA-8ED6A9AC7330 New ItemGUID=6C1DE2D3-B723-43D4-A38B-5B030F531BF3 Old RevisionGUID=140D2F16-E9B7-4EBF-94B1-55BDFFD16966 New RevisionGUID=A8172E27-6FA5-45DE-AC08-194387A726E9
+Change Managed Component Library Link : Designator=C2 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=76589A48-4E5C-4E0D-87AA-8ED6A9AC7330 New ItemGUID=6C1DE2D3-B723-43D4-A38B-5B030F531BF3 Old RevisionGUID=140D2F16-E9B7-4EBF-94B1-55BDFFD16966 New RevisionGUID=A8172E27-6FA5-45DE-AC08-194387A726E9
+Change Managed Component Library Link : Designator=C6 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=59FFB412-DED0-4B75-9FBB-C41893CD57B1 New ItemGUID=0C0D69EC-E263-4DAF-818E-37132D869BE6 Old RevisionGUID=2637456C-3BDF-446D-97D8-F10480C20BB1 New RevisionGUID=D130D26B-DCDA-45CF-B950-CA1BA6544745
+Change Managed Component Library Link : Designator=C8 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=76589A48-4E5C-4E0D-87AA-8ED6A9AC7330 New ItemGUID=6C1DE2D3-B723-43D4-A38B-5B030F531BF3 Old RevisionGUID=140D2F16-E9B7-4EBF-94B1-55BDFFD16966 New RevisionGUID=A8172E27-6FA5-45DE-AC08-194387A726E9
+Change Managed Component Library Link : Designator=C9 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=76589A48-4E5C-4E0D-87AA-8ED6A9AC7330 New ItemGUID=6C1DE2D3-B723-43D4-A38B-5B030F531BF3 Old RevisionGUID=140D2F16-E9B7-4EBF-94B1-55BDFFD16966 New RevisionGUID=A8172E27-6FA5-45DE-AC08-194387A726E9
+Change component parameters: Designator = "C1" ("C1"); Footprint = "FP-25MU105MA23216-MFG"; UniqueID = "\KBGLTYQX" ("\KBGLTYQX")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Vitramon"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "VJ0805Y105KXQRW1BC"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C2" ("C2"); Footprint = "FP-25MU105MA23216-MFG"; UniqueID = "\NAYABVLI" ("\NAYABVLI")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Vitramon"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "VJ0805Y105KXQRW1BC"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C6" ("C6"); Footprint = "FP-ECHU_X_E2-MFG"; UniqueID = "\IVNTVYQT" ("\IVNTVYQT")
+Change component parameters (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C8" ("C8"); Footprint = "FP-25MU105MA23216-MFG"; UniqueID = "\PDPAZEHH" ("\PDPAZEHH")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Vitramon"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "VJ0805Y105KXQRW1BC"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C9" ("C9"); Footprint = "FP-25MU105MA23216-MFG"; UniqueID = "\SDUNZZFK" ("\SDUNZZFK")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Vitramon"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "VJ0805Y105KXQRW1BC"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=SN Pin=C1-1
+Added Pin To Net: NetName=AVDD Pin=C1-2
+Added Pin To Net: NetName=SN Pin=C2-1
+Added Pin To Net: NetName=DVDD Pin=C2-2
+Added Pin To Net: NetName=SN Pin=C8-1
+Added Pin To Net: NetName=VM Pin=C8-2
+Added Pin To Net: NetName=SN Pin=C9-1
+Added Pin To Net: NetName=VM Pin=C9-2

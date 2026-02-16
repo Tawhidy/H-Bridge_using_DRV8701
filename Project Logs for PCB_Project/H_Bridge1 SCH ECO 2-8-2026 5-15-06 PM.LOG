@@ -1,0 +1,19 @@
+Update Managed Component C1 From CMP-2007-01676-1[1uF/35V] To CMP-2007-01676-1[VJ0805Y105KXQRW1BC] in H_Bridge1.SchDoc
+Update Managed Component C2 From CMP-2007-01676-1[1uF/35V] To CMP-2007-01676-1[VJ0805Y105KXQRW1BC] in H_Bridge1.SchDoc
+Update Managed Component C3 From CMP-01474-49200388-1[1uF/50V] To CMP-01474-49200388-1[25MU105MA23216] in H_Bridge1.SchDoc
+Update Managed Component C4 From CMP-04427-019216-1[100nF/35V] To CMP-04427-019216-1[0402ZC474KAT2A] in H_Bridge1.SchDoc
+Update Managed Component C5 From CMP-05434-000006-1[10uF/35V] To CMP-05434-000006-1[ECHU1C473GX5] in H_Bridge1.SchDoc
+Update Managed Component C6 From CMP-04427-019216-1[100nF/35V] To CMP-04427-019216-1[0402ZC474KAT2A] in H_Bridge1.SchDoc
+Update Managed Component C8 From CMP-2007-01676-1[1uF/35V] To CMP-2007-01676-1[VJ0805Y105KXQRW1BC] in H_Bridge1.SchDoc
+Update Managed Component C9 From CMP-2007-01676-1[1uF/35V] To CMP-2007-01676-1[VJ0805Y105KXQRW1BC] in H_Bridge1.SchDoc
+Replace Part C? EEEHAE471UAP in C:\Users\Tawhid\Documents\Tawhid's Docs\Altair_Designs\PCB_Project\H_Bridge1.SchDoc with EEEHAE471UAP from EEEHAE471UAP.IntLib
+Replace Part C? EEEHAE471UAP in C:\Users\Tawhid\Documents\Tawhid's Docs\Altair_Designs\PCB_Project\H_Bridge1.SchDoc with EEEHAE471UAP from EEEHAE471UAP.IntLib
+Replace Part J1 XT60-M in C:\Users\Tawhid\Documents\Tawhid's Docs\Altair_Designs\PCB_Project\H_Bridge1.SchDoc with XT60-M from XT60-M.IntLib
+Update Managed Component P1 From CMP-1024-00125-1[MTSW-106-09-T-S-540] To CMP-1024-00125-1[MTSW-106-09-T-S-540] in H_Bridge1.SchDoc
+Update Managed Component P2 From CMP-1024-00125-1[MTSW-106-09-T-S-540] To CMP-1024-00125-1[MTSW-106-09-T-S-540] in H_Bridge1.SchDoc
+Update Managed Component R1 From CMP-03211-005210-1[RN73C1J1K91BTDF] To CMP-03211-005210-1[RN73C1J1K91BTDF] in H_Bridge1.SchDoc
+Update Managed Component U1 From CMP-04915-000069-1[DRV8701ERGER] To CMP-04915-000069-1[DRV8701ERGER] in H_Bridge1.SchDoc
+Replace Part U? CSD18532Q5B in C:\Users\Tawhid\Documents\Tawhid's Docs\Altair_Designs\PCB_Project\H_Bridge1.SchDoc with CSD18532Q5B from CSD18532Q5B.IntLib
+Replace Part U? CSD18532Q5B in C:\Users\Tawhid\Documents\Tawhid's Docs\Altair_Designs\PCB_Project\H_Bridge1.SchDoc with CSD18532Q5B from CSD18532Q5B.IntLib
+Replace Part U? CSD18532Q5B in C:\Users\Tawhid\Documents\Tawhid's Docs\Altair_Designs\PCB_Project\H_Bridge1.SchDoc with CSD18532Q5B from CSD18532Q5B.IntLib
+Replace Part U? CSD18532Q5B in C:\Users\Tawhid\Documents\Tawhid's Docs\Altair_Designs\PCB_Project\H_Bridge1.SchDoc with CSD18532Q5B from CSD18532Q5B.IntLib

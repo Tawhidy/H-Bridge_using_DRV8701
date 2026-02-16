@@ -1,0 +1,43 @@
+Removed Pin From Net: NetName=GND Pin=U?-1
+Removed Pin From Net: NetName=OUT1 Pin=U?-1
+Removed Pin From Net: NetName=OUT2 Pin=U?-1
+Removed Pin From Net: NetName=GND Pin=U?-2
+Removed Pin From Net: NetName=OUT1 Pin=U?-2
+Removed Pin From Net: NetName=OUT2 Pin=U?-2
+Removed Pin From Net: NetName=GND Pin=U?-3
+Removed Pin From Net: NetName=OUT1 Pin=U?-3
+Removed Pin From Net: NetName=OUT2 Pin=U?-3
+Removed Pin From Net: NetName=GH1 Pin=U?-4
+Removed Pin From Net: NetName=GH2 Pin=U?-4
+Removed Pin From Net: NetName=GL1 Pin=U?-4
+Removed Pin From Net: NetName=OUT1 Pin=U?-5
+Removed Pin From Net: NetName=VM Pin=U?-5
+Removed Pin From Net: NetName=OUT1 Pin=U?-6
+Removed Pin From Net: NetName=VM Pin=U?-6
+Removed Pin From Net: NetName=OUT1 Pin=U?-7
+Removed Pin From Net: NetName=VM Pin=U?-7
+Removed Pin From Net: NetName=OUT1 Pin=U?-8
+Removed Pin From Net: NetName=VM Pin=U?-8
+Added Pin To Net: NetName=GND Pin=U?-1
+Added Pin To Net: NetName=OUT1 Pin=U?-1
+Added Pin To Net: NetName=OUT2 Pin=U?-1
+Added Pin To Net: NetName=GND Pin=U?-2
+Added Pin To Net: NetName=OUT1 Pin=U?-2
+Added Pin To Net: NetName=OUT2 Pin=U?-2
+Added Pin To Net: NetName=GND Pin=U?-3
+Added Pin To Net: NetName=OUT1 Pin=U?-3
+Added Pin To Net: NetName=OUT2 Pin=U?-3
+Added Pin To Net: NetName=GH1 Pin=U?-4
+Added Pin To Net: NetName=GH2 Pin=U?-4
+Added Pin To Net: NetName=GL1 Pin=U?-4
+Added Pin To Net: NetName=OUT1 Pin=U?-5
+Added Pin To Net: NetName=VM Pin=U?-5
+Added Pin To Net: NetName=OUT1 Pin=U?-6
+Added Pin To Net: NetName=VM Pin=U?-6
+Added Pin To Net: NetName=OUT1 Pin=U?-7
+Added Pin To Net: NetName=VM Pin=U?-7
+Added Pin To Net: NetName=OUT1 Pin=U?-8
+Added Pin To Net: NetName=VM Pin=U?-8
+Added Member To Class: ClassName=H_Bridge1 Member=Component U? CSD18532Q5B
+Added Member To Class: ClassName=H_Bridge1 Member=Component U? CSD18532Q5B
+Added Member To Class: ClassName=H_Bridge1 Member=Component U? CSD18532Q5B

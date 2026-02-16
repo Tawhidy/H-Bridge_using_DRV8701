@@ -1,0 +1,24 @@
+Removed Pin From Net: NetName=VM Pin=C7-1
+Removed Pin From Net: NetName=GND Pin=C7-2
+Removed Pin From Net: NetName=VM Pin=C10-1
+Removed Pin From Net: NetName=GND Pin=C10-2
+Change Component Footprint: Designator=C7 Old Footprint=CAP_EEEHAE471UAP New Footprint=CAPPRD500W80D1000H1170
+Change Component Footprint: Designator=C10 Old Footprint=CAP_EEEHAE471UAP New Footprint=CAPPRD500W80D1000H1170
+Change component parameters: Designator = "C7" ("C7"); Footprint = "CAP_EEEHAE471UAP"; UniqueID = "\YOAFNDJA" ("\YOAFNDJA")
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "{'manufacturer': u'Panasonic Electronic Components'}"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "EEHAZSV471UB"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "C10" ("C10"); Footprint = "CAP_EEEHAE471UAP"; UniqueID = "\GOTTMCCJ" ("\GOTTMCCJ")
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "{'manufacturer': u'Panasonic Electronic Components'}"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "EEHAZSV471UB"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C7-N
+Added Pin To Net: NetName=VM Pin=C7-P
+Added Pin To Net: NetName=GND Pin=C10-N
+Added Pin To Net: NetName=VM Pin=C10-P

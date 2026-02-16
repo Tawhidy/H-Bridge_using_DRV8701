@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=VM Pin=C7-1
+Removed Pin From Net: NetName=GND Pin=C7-2
+Removed Pin From Net: NetName=VM Pin=C10-1
+Removed Pin From Net: NetName=GND Pin=C10-2
+Removed Member From Class: ClassName=H_Bridge1 Member=C7
+Removed Member From Class: ClassName=H_Bridge1 Member=C10
+Change Component Designator: OldDesignator=U2 NewDesignator=U?
+Change Component Designator: OldDesignator=U3 NewDesignator=U?
+Change Component Designator: OldDesignator=U4 NewDesignator=U?
