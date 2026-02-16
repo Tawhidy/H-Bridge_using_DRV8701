@@ -1,0 +1,22 @@
+Removed Pin From Net: NetName=DVDD Pin=C1-1
+Removed Pin From Net: NetName=AVDD Pin=C2-1
+Removed Pin From Net: NetName=+5 Pin=R2-1
+Removed Pin From Net: NetName=nSLEEP Pin=R2-2
+Change Component Footprint: Designator=U1 Old Footprint=FP-RGE0024F-MFG New Footprint=QFN50P400X400X100-25N
+Change Component Comment : Designator=U1 Old Comment=DRV8701ERGER New Comment=DRV8701ERGET
+Change Managed Component Library Link : Designator=U1 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID= Old ItemGUID=067ACB13-309B-482C-84C7-4B8E7234F520 New ItemGUID= Old RevisionGUID=F3A9D6FC-4D4B-4FE9-8240-ACD33F230B3E New RevisionGUID=
+Change component parameters: Designator = "U1" ("U1"); Footprint = "FP-RGE0024F-MFG"; UniqueID = "\WKOYIZDR" ("\WKOYIZDR")
+Change component parameters (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/DRV8701ERGET/Texas+Instruments/view-part/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "DRV8701ERGET"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "QFN-24 Texas Instruments"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/DRV8701ERGET/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/DRV8701ERGET/Texas+Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=AVDD Pin=C1-1
+Added Pin To Net: NetName=DVDD Pin=C2-1
+Added Pin To Net: NetName=nSLEEP Pin=R2-1
+Added Pin To Net: NetName=+5 Pin=R2-2
+Change Net Name : Old Net Name=CPH New Net Name=NetC4_1
