@@ -1,0 +1,493 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD23\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2/17/2026</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">6:49:34 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc" class="file"><acronym title="D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc">D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">51</td></tr>
+</table>
+</td>
+</table><a name="IDTTQ5ZPMKP5VRHF51GSNLSURUDMHDD1AW1LETGDNFCMYDLQOCZFOH"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEWSKMFSWGLLAL0WWBDCRYXHZENB35VGNPTKGSDG3DFRQ2Y3TM3AB">Clearance Constraint (Gap=0.2mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWBQUBAUXR1XOKF4YP5JJ4FSJHOPUJ200IJZNU5PQSVLCE2UDPYHH">Clearance Constraint (Gap=0.2mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQYKO5N1050XADZ0ZFHIPDDJIFB0H3A3MULER3WMFFU1TMV2GCBGB">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBHS10NYC254KB2U1YLYZVL2UJCBBQ11DIXW3LK3HTI4R4SHSW0F">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUBZPZWFV5K0CNPKFIGW2LP3AJKIUA2OCMBHM55KAW5IL22S2AHTD">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEAVL4WPZBM2TC0QKQCVTJ0KD0ETROIT5DQOAL3CGRXDGTMEKXM1F">Width Constraint (Min=0.2mm) (Max=2mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEG1TGJ2YJRZRO3CYZJPQL2CUJNCNOEXFAPECHGN34VXT2EY2NZOM">Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNDO2O40EALEOE4NU3LKNOZPP0MU5ZK35J432B5NQMD1FVRART2EG">Hole Size Constraint (Min=0.2mm) (Max=6mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCMQ4N0SXUSVFB5AY34UNEPKBJGQQKS1IKJ5SGPIUD4CHX1IKBPHE">Hole To Hole Clearance (Gap=0.4mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3EOTG01NWKPJF24VOZLVQVOIPMF5GUGXMW10WWK4SDFMR5OKBP0E">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">49</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJBH3WSBW12JFOE5YM3H054M3GFXHYIMVMJ3SMJ02KRCBJEPJ0RE">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBP14RZO5MT4MHXNRQPFOMI2Z1G3WSI1HMQZZNHP4RJXGWP2K2IN">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQ0IHPGFVW2QTJ2EU3CFFSOZWAFJ0DSV1EMIHYOJPHHV0EFUJBGGD">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLSVZMHJRH34WPDZJPM2DYZNDBBKGJVN2OZTA3QCHGUJFVOY1ABIH">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">51</td>
+</tr>
+</table><br><a name="ID3EOTG01NWKPJF24VOZLVQVOIPMF5GUGXMW10WWK4SDFMR5OKBP0E"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4247.84mil|Location2.X=4259.09mil|Location1.Y=2709.907mil|Location2.Y=2721.157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4247.84mil|Location2.X=4259.09mil|Location1.Y=2709.907mil|Location2.Y=2721.157mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-1(108.288mm,69.292mm) on Top Layer And Pad U1-2(107.788mm,69.292mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4267.229mil|Location2.X=4278.479mil|Location1.Y=2704.198mil|Location2.Y=2715.448mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4267.229mil|Location2.X=4278.479mil|Location1.Y=2704.198mil|Location2.Y=2715.448mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.244mm &lt; 0.254mm) Between Pad U1-1(108.288mm,69.292mm) on Top Layer And Pad U1-24(108.993mm,68.587mm) on Top Layer [Top Solder] Mask Sliver [0.244mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4261.521mil|Location2.X=4272.771mil|Location1.Y=2704.591mil|Location2.Y=2715.841mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4261.521mil|Location2.X=4272.771mil|Location1.Y=2704.591mil|Location2.Y=2715.841mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-1(108.288mm,69.292mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4144.001mil|Location2.X=4155.251mil|Location1.Y=2625.753mil|Location2.Y=2637.003mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4144.001mil|Location2.X=4155.251mil|Location1.Y=2625.753mil|Location2.Y=2637.003mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-10(105.083mm,67.087mm) on Top Layer And Pad U1-11(105.083mm,66.587mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4149.316mil|Location2.X=4160.566mil|Location1.Y=2639.434mil|Location2.Y=2650.684mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4149.316mil|Location2.X=4160.566mil|Location1.Y=2639.434mil|Location2.Y=2650.684mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-10(105.083mm,67.087mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4144.001mil|Location2.X=4155.251mil|Location1.Y=2645.438mil|Location2.Y=2656.688mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4144.001mil|Location2.X=4155.251mil|Location1.Y=2645.438mil|Location2.Y=2656.688mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-10(105.083mm,67.087mm) on Top Layer And Pad U1-9(105.083mm,67.587mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4144.001mil|Location2.X=4155.251mil|Location1.Y=2606.068mil|Location2.Y=2617.318mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4144.001mil|Location2.X=4155.251mil|Location1.Y=2606.068mil|Location2.Y=2617.318mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-11(105.083mm,66.587mm) on Top Layer And Pad U1-12(105.083mm,66.087mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4149.316mil|Location2.X=4160.566mil|Location1.Y=2619.749mil|Location2.Y=2630.999mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4149.316mil|Location2.X=4160.566mil|Location1.Y=2619.749mil|Location2.Y=2630.999mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-11(105.083mm,66.587mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4149.71mil|Location2.X=4160.96mil|Location1.Y=2586.678mil|Location2.Y=2597.928mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4149.71mil|Location2.X=4160.96mil|Location1.Y=2586.678mil|Location2.Y=2597.928mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.244mm &lt; 0.254mm) Between Pad U1-12(105.083mm,66.087mm) on Top Layer And Pad U1-13(105.788mm,65.382mm) on Top Layer [Top Solder] Mask Sliver [0.244mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4149.316mil|Location2.X=4160.566mil|Location1.Y=2600.064mil|Location2.Y=2611.314mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4149.316mil|Location2.X=4160.566mil|Location1.Y=2600.064mil|Location2.Y=2611.314mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-12(105.083mm,66.087mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4169.099mil|Location2.X=4180.349mil|Location1.Y=2580.97mil|Location2.Y=2592.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4169.099mil|Location2.X=4180.349mil|Location1.Y=2580.97mil|Location2.Y=2592.22mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-13(105.788mm,65.382mm) on Top Layer And Pad U1-14(106.288mm,65.382mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4163.096mil|Location2.X=4174.346mil|Location1.Y=2586.284mil|Location2.Y=2597.534mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4163.096mil|Location2.X=4174.346mil|Location1.Y=2586.284mil|Location2.Y=2597.534mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-13(105.788mm,65.382mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4188.784mil|Location2.X=4200.034mil|Location1.Y=2580.97mil|Location2.Y=2592.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4188.784mil|Location2.X=4200.034mil|Location1.Y=2580.97mil|Location2.Y=2592.22mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-14(106.288mm,65.382mm) on Top Layer And Pad U1-15(106.788mm,65.382mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4182.78mil|Location2.X=4194.03mil|Location1.Y=2586.284mil|Location2.Y=2597.534mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4182.78mil|Location2.X=4194.03mil|Location1.Y=2586.284mil|Location2.Y=2597.534mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-14(106.288mm,65.382mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4208.47mil|Location2.X=4219.72mil|Location1.Y=2580.97mil|Location2.Y=2592.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4208.47mil|Location2.X=4219.72mil|Location1.Y=2580.97mil|Location2.Y=2592.22mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-15(106.788mm,65.382mm) on Top Layer And Pad U1-16(107.288mm,65.382mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4202.466mil|Location2.X=4213.716mil|Location1.Y=2586.284mil|Location2.Y=2597.534mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4202.466mil|Location2.X=4213.716mil|Location1.Y=2586.284mil|Location2.Y=2597.534mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-15(106.788mm,65.382mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4228.154mil|Location2.X=4239.404mil|Location1.Y=2580.97mil|Location2.Y=2592.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4228.154mil|Location2.X=4239.404mil|Location1.Y=2580.97mil|Location2.Y=2592.22mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-16(107.288mm,65.382mm) on Top Layer And Pad U1-17(107.788mm,65.382mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4222.151mil|Location2.X=4233.401mil|Location1.Y=2586.284mil|Location2.Y=2597.534mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4222.151mil|Location2.X=4233.401mil|Location1.Y=2586.284mil|Location2.Y=2597.534mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-16(107.288mm,65.382mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4247.84mil|Location2.X=4259.09mil|Location1.Y=2580.97mil|Location2.Y=2592.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4247.84mil|Location2.X=4259.09mil|Location1.Y=2580.97mil|Location2.Y=2592.22mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-17(107.788mm,65.382mm) on Top Layer And Pad U1-18(108.288mm,65.382mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4241.836mil|Location2.X=4253.086mil|Location1.Y=2586.284mil|Location2.Y=2597.534mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4241.836mil|Location2.X=4253.086mil|Location1.Y=2586.284mil|Location2.Y=2597.534mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-17(107.788mm,65.382mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4267.229mil|Location2.X=4278.479mil|Location1.Y=2586.678mil|Location2.Y=2597.928mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4267.229mil|Location2.X=4278.479mil|Location1.Y=2586.678mil|Location2.Y=2597.928mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.244mm &lt; 0.254mm) Between Pad U1-18(108.288mm,65.382mm) on Top Layer And Pad U1-19(108.993mm,66.087mm) on Top Layer [Top Solder] Mask Sliver [0.244mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4261.521mil|Location2.X=4272.771mil|Location1.Y=2586.284mil|Location2.Y=2597.534mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4261.521mil|Location2.X=4272.771mil|Location1.Y=2586.284mil|Location2.Y=2597.534mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-18(108.288mm,65.382mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4272.938mil|Location2.X=4284.188mil|Location1.Y=2606.068mil|Location2.Y=2617.318mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4272.938mil|Location2.X=4284.188mil|Location1.Y=2606.068mil|Location2.Y=2617.318mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-19(108.993mm,66.087mm) on Top Layer And Pad U1-20(108.993mm,66.587mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4267.623mil|Location2.X=4278.873mil|Location1.Y=2600.064mil|Location2.Y=2611.314mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4267.623mil|Location2.X=4278.873mil|Location1.Y=2600.064mil|Location2.Y=2611.314mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-19(108.993mm,66.087mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4241.836mil|Location2.X=4253.086mil|Location1.Y=2704.591mil|Location2.Y=2715.841mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4241.836mil|Location2.X=4253.086mil|Location1.Y=2704.591mil|Location2.Y=2715.841mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-2(107.788mm,69.292mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4228.154mil|Location2.X=4239.404mil|Location1.Y=2709.907mil|Location2.Y=2721.157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4228.154mil|Location2.X=4239.404mil|Location1.Y=2709.907mil|Location2.Y=2721.157mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-2(107.788mm,69.292mm) on Top Layer And Pad U1-3(107.288mm,69.292mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4272.938mil|Location2.X=4284.188mil|Location1.Y=2625.753mil|Location2.Y=2637.003mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4272.938mil|Location2.X=4284.188mil|Location1.Y=2625.753mil|Location2.Y=2637.003mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-20(108.993mm,66.587mm) on Top Layer And Pad U1-21(108.993mm,67.087mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4267.623mil|Location2.X=4278.873mil|Location1.Y=2619.749mil|Location2.Y=2630.999mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4267.623mil|Location2.X=4278.873mil|Location1.Y=2619.749mil|Location2.Y=2630.999mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-20(108.993mm,66.587mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4272.938mil|Location2.X=4284.188mil|Location1.Y=2645.438mil|Location2.Y=2656.688mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4272.938mil|Location2.X=4284.188mil|Location1.Y=2645.438mil|Location2.Y=2656.688mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-21(108.993mm,67.087mm) on Top Layer And Pad U1-22(108.993mm,67.587mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4267.623mil|Location2.X=4278.873mil|Location1.Y=2639.434mil|Location2.Y=2650.684mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4267.623mil|Location2.X=4278.873mil|Location1.Y=2639.434mil|Location2.Y=2650.684mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-21(108.993mm,67.087mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4272.938mil|Location2.X=4284.188mil|Location1.Y=2665.123mil|Location2.Y=2676.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4272.938mil|Location2.X=4284.188mil|Location1.Y=2665.123mil|Location2.Y=2676.373mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-22(108.993mm,67.587mm) on Top Layer And Pad U1-23(108.993mm,68.087mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4267.623mil|Location2.X=4278.873mil|Location1.Y=2659.119mil|Location2.Y=2670.369mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4267.623mil|Location2.X=4278.873mil|Location1.Y=2659.119mil|Location2.Y=2670.369mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-22(108.993mm,67.587mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4272.938mil|Location2.X=4284.188mil|Location1.Y=2684.808mil|Location2.Y=2696.058mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4272.938mil|Location2.X=4284.188mil|Location1.Y=2684.808mil|Location2.Y=2696.058mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-23(108.993mm,68.087mm) on Top Layer And Pad U1-24(108.993mm,68.587mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4267.623mil|Location2.X=4278.873mil|Location1.Y=2678.804mil|Location2.Y=2690.054mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4267.623mil|Location2.X=4278.873mil|Location1.Y=2678.804mil|Location2.Y=2690.054mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-23(108.993mm,68.087mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4267.623mil|Location2.X=4278.873mil|Location1.Y=2698.489mil|Location2.Y=2709.739mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4267.623mil|Location2.X=4278.873mil|Location1.Y=2698.489mil|Location2.Y=2709.739mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-24(108.993mm,68.587mm) on Top Layer And Pad U1-25(107.038mm,67.337mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4222.151mil|Location2.X=4233.401mil|Location1.Y=2704.591mil|Location2.Y=2715.841mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4222.151mil|Location2.X=4233.401mil|Location1.Y=2704.591mil|Location2.Y=2715.841mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-25(107.038mm,67.337mm) on Top Layer And Pad U1-3(107.288mm,69.292mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4202.466mil|Location2.X=4213.716mil|Location1.Y=2704.591mil|Location2.Y=2715.841mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4202.466mil|Location2.X=4213.716mil|Location1.Y=2704.591mil|Location2.Y=2715.841mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-25(107.038mm,67.337mm) on Top Layer And Pad U1-4(106.788mm,69.292mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4182.78mil|Location2.X=4194.03mil|Location1.Y=2703.509mil|Location2.Y=2714.759mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4182.78mil|Location2.X=4194.03mil|Location1.Y=2703.509mil|Location2.Y=2714.759mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.048mm &lt; 0.254mm) Between Pad U1-25(107.038mm,67.337mm) on Top Layer And Pad U1-5(106.288mm,69.292mm) on Top Layer [Top Solder] Mask Sliver [0.048mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4163.096mil|Location2.X=4174.346mil|Location1.Y=2704.591mil|Location2.Y=2715.841mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4163.096mil|Location2.X=4174.346mil|Location1.Y=2704.591mil|Location2.Y=2715.841mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-25(107.038mm,67.337mm) on Top Layer And Pad U1-6(105.788mm,69.292mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4149.316mil|Location2.X=4160.566mil|Location1.Y=2698.489mil|Location2.Y=2709.739mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4149.316mil|Location2.X=4160.566mil|Location1.Y=2698.489mil|Location2.Y=2709.739mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-25(107.038mm,67.337mm) on Top Layer And Pad U1-7(105.083mm,68.587mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4149.316mil|Location2.X=4160.566mil|Location1.Y=2678.804mil|Location2.Y=2690.054mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4149.316mil|Location2.X=4160.566mil|Location1.Y=2678.804mil|Location2.Y=2690.054mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-25(107.038mm,67.337mm) on Top Layer And Pad U1-8(105.083mm,68.087mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4149.316mil|Location2.X=4160.566mil|Location1.Y=2659.119mil|Location2.Y=2670.369mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4149.316mil|Location2.X=4160.566mil|Location1.Y=2659.119mil|Location2.Y=2670.369mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.103mm &lt; 0.254mm) Between Pad U1-25(107.038mm,67.337mm) on Top Layer And Pad U1-9(105.083mm,67.587mm) on Top Layer [Top Solder] Mask Sliver [0.103mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4208.47mil|Location2.X=4219.72mil|Location1.Y=2709.907mil|Location2.Y=2721.157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4208.47mil|Location2.X=4219.72mil|Location1.Y=2709.907mil|Location2.Y=2721.157mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-3(107.288mm,69.292mm) on Top Layer And Pad U1-4(106.788mm,69.292mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4188.784mil|Location2.X=4200.034mil|Location1.Y=2734.907mil|Location2.Y=2746.157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4188.784mil|Location2.X=4200.034mil|Location1.Y=2734.907mil|Location2.Y=2746.157mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-4(106.788mm,69.292mm) on Top Layer And Pad U1-5(106.288mm,69.292mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4169.099mil|Location2.X=4180.349mil|Location1.Y=2709.907mil|Location2.Y=2721.157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4169.099mil|Location2.X=4180.349mil|Location1.Y=2709.907mil|Location2.Y=2721.157mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-5(106.288mm,69.292mm) on Top Layer And Pad U1-6(105.788mm,69.292mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4149.71mil|Location2.X=4160.96mil|Location1.Y=2704.198mil|Location2.Y=2715.448mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4149.71mil|Location2.X=4160.96mil|Location1.Y=2704.198mil|Location2.Y=2715.448mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.244mm &lt; 0.254mm) Between Pad U1-6(105.788mm,69.292mm) on Top Layer And Pad U1-7(105.083mm,68.587mm) on Top Layer [Top Solder] Mask Sliver [0.244mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4144.001mil|Location2.X=4155.251mil|Location1.Y=2684.808mil|Location2.Y=2696.058mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4144.001mil|Location2.X=4155.251mil|Location1.Y=2684.808mil|Location2.Y=2696.058mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-7(105.083mm,68.587mm) on Top Layer And Pad U1-8(105.083mm,68.087mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4144.001mil|Location2.X=4155.251mil|Location1.Y=2665.123mil|Location2.Y=2676.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4144.001mil|Location2.X=4155.251mil|Location1.Y=2665.123mil|Location2.Y=2676.373mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.138mm &lt; 0.254mm) Between Pad U1-8(105.083mm,68.087mm) on Top Layer And Pad U1-9(105.083mm,67.587mm) on Top Layer [Top Solder] Mask Sliver [0.138mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4804.375mil|Location2.X=4815.625mil|Location1.Y=2049.375mil|Location2.Y=2060.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4804.375mil|Location2.X=4815.625mil|Location1.Y=2049.375mil|Location2.Y=2060.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.213mm &lt; 0.254mm) Between Via (122.174mm,51.689mm) from Top Layer to Bottom Layer And Via (122.174mm,52.705mm) from Top Layer to Bottom Layer [Bottom Solder] Mask Sliver [0.213mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDJBH3WSBW12JFOE5YM3H054M3GFXHYIMVMJ3SMJ02KRCBJEPJ0RE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4257.682mil|Location2.X=4268.932mil|Location1.Y=2771.127mil|Location2.Y=2782.377mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4257.682mil|Location2.X=4268.932mil|Location1.Y=2771.127mil|Location2.Y=2782.377mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.035mm &lt; 0.254mm) Between Arc (108.288mm,70.312mm) on Top Overlay And Pad C3-2(107.997mm,71.247mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.035mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDBP14RZO5MT4MHXNRQPFOMI2Z1G3WSI1HMQZZNHP4RJXGWP2K2IN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4713.323mil|Location2.X=4724.573mil|Location1.Y=2011.315mil|Location2.Y=2022.565mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Tawhid's Docs\Altair_Designs\H-Bridge_using_DRV8701\H_Bridge.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4713.323mil|Location2.X=4724.573mil|Location1.Y=2011.315mil|Location2.Y=2022.565mil|Absolute=True">Silk To Silk Clearance Constraint: (0.187mm &lt; 0.254mm) Between Text "C9(1uF)" (118.542mm,50.586mm) on Top Overlay And Track (118.982mm,51.424mm)(120.032mm,51.424mm) on Top Overlay Silk Text to Silk Clearance [0.187mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

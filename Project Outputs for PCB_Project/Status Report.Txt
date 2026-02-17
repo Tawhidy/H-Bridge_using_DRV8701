@@ -1,0 +1,23 @@
+Output: Gerber X2 Files
+Type  : GerberX2
+From  : Variant [[No Variations]] of Project [PCB_Project.PrjPcb]
+   Generated File[H_Bridge.GTL]
+   Generated File[H_Bridge.GBL]
+   Generated File[H_Bridge.GPB]
+   Generated File[H_Bridge.GPT]
+   Generated File[H_Bridge.GTO]
+   Generated File[H_Bridge.GBO]
+   Generated File[H_Bridge.GTS]
+   Generated File[H_Bridge.GBS]
+   Generated File[H_Bridge.GTP]
+   Generated File[H_Bridge.GBP]
+   Generated File[H_Bridge.GM]
+   Generated File[H_Bridge.GBR2]
+   Generated File[H_Bridge.GD1]
+   Generated File[H_Bridge.GG1]
+
+
+Files Generated   : 14
+Documents Printed : 0
+
+Finished Output Generation At 6:50:18 AM On 2/17/2026
