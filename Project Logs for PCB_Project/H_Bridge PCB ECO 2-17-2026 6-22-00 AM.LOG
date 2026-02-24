@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=AVDD Pin=C1-1
+Removed Pin From Net: NetName=DVDD Pin=C2-1
+Added Pin To Net: NetName=DVDD Pin=C1-1
+Added Pin To Net: NetName=AVDD Pin=C2-1
+Added Member To Class: ClassName=H_Bridge1 Member=Component C2 1uF/35V

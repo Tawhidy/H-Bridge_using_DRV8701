@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=FAULT Pin=R4-2
+Removed Pin From Net: NetName=FAULT Pin=U1-9
+Change Net Name : Old Net Name=NetC4_2 New Net Name=CPL
+Added Pin To Net: NetName=nFAULT Pin=R4-2
+Added Pin To Net: NetName=nFAULT Pin=U1-9
+Added Net: Name=nFAULT
