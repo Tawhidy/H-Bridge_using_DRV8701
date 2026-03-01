@@ -1,0 +1,111 @@
+Removed Pin From Net: NetName=IN2 Pin=D2-A
+Removed Pin From Net: NetName=IN1 Pin=D3-A
+Removed Pin From Net: NetName=IN1 Pin=J3-2
+Removed Pin From Net: NetName=GND Pin=J3-4
+Removed Pin From Net: NetName=DVDD Pin=R4-1
+Removed Pin From Net: NetName=GND Pin=R6-1
+Removed Pin From Net: NetName=GND Pin=R7-1
+Removed Pin From Net: NetName=NetD3_C Pin=R7-2
+Change component parameters: Designator = "R1" ("R1"); Footprint = "RESC3216X60X45ML15T20"; UniqueID = "\WSMTOOPM" ("\WSMTOOPM")
+Change component parameters (AddParameter): Name = "Case/Package"; Value = "1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "155°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-55°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "SM"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pins"; Value = "2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "250mW"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS Compliant"; Value = "True"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "500K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "200V"; VariantName = "[No Variations]"
+Added Component: Designator=Q1(FAIR-TO-92)
+Add component (AddParameter): Name = "Category"; Value = "GPBJT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "https://datasheet.ciiva.com/4722/2n3904-82270-4722369.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "Rev. 1.1.0, 10/2014"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "FairchildSemiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "https://www.fairchildsemi.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Collector Base Voltage"; Value = "60V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Collector Emitter Saturation Voltage"; Value = "0.2@1mA@10mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Collector Emitter Voltage"; Value = "40V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum DC Collector Current"; Value = "0.2A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Operating Frequency"; Value = "300(Min)MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Power Dissipation"; Value = "625mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Minimum DC Current Gain"; Value = "40@0.1mA@1V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting"; Value = "ThroughHole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55to150degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "3TO-92"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "3-Pin Transistor Outline Package, Body Dia 4.79 mm, Pitch 1.27 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "TO-92"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Bulk"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Count"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rad Hard"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "NPN"; VariantName = "[No Variations]"
+Added Component: Designator=Q2(FAIR-TO-92)
+Add component (AddParameter): Name = "Category"; Value = "GPBJT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "https://datasheet.ciiva.com/4722/2n3904-82270-4722369.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "Rev. 1.1.0, 10/2014"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "FairchildSemiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "https://www.fairchildsemi.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Collector Base Voltage"; Value = "60V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Collector Emitter Saturation Voltage"; Value = "0.2@1mA@10mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Collector Emitter Voltage"; Value = "40V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum DC Collector Current"; Value = "0.2A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Operating Frequency"; Value = "300(Min)MHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Power Dissipation"; Value = "625mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Minimum DC Current Gain"; Value = "40@0.1mA@1V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting"; Value = "ThroughHole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55to150degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "3TO-92"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "3-Pin Transistor Outline Package, Body Dia 4.79 mm, Pitch 1.27 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "TO-92"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Bulk"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Count"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rad Hard"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "NPN"; VariantName = "[No Variations]"
+Added Component: Designator=R8(RESC3216X60X45ML15T20)
+Add component (AddParameter): Name = "Case/Package"; Value = "1206"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "SM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pins"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "250mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "True"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "200V"; VariantName = "[No Variations]"
+Added Component: Designator=R9(RESC3216X60X45ML15T20)
+Add component (AddParameter): Name = "Case/Package"; Value = "1206"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "SM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pins"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "250mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "True"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "200V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=D2-A
+Added Pin To Net: NetName=VCC Pin=D3-A
+Added Pin To Net: NetName=GND Pin=J3-2
+Added Pin To Net: NetName=IN1 Pin=J3-4
+Added Pin To Net: NetName=GND Pin=Q1-1
+Added Pin To Net: NetName=GND Pin=Q2-1
+Added Pin To Net: NetName=VCC Pin=R4-1
+Added Pin To Net: NetName=NetD3_C Pin=R7-1
+Added Pin To Net: NetName=IN1 Pin=R8-2
+Added Pin To Net: NetName=IN2 Pin=R9-2
+Added Pin To Net: NetName=NetQ1_2 Pin=Q1-2
+Added Pin To Net: NetName=NetQ1_2 Pin=R9-1
+Added Net: Name=NetQ1_2
+Added Pin To Net: NetName=NetQ1_3 Pin=Q1-3
+Added Pin To Net: NetName=NetQ1_3 Pin=R7-2
+Added Net: Name=NetQ1_3
+Added Pin To Net: NetName=NetQ2_2 Pin=Q2-2
+Added Pin To Net: NetName=NetQ2_2 Pin=R8-1
+Added Net: Name=NetQ2_2
+Added Pin To Net: NetName=NetQ2_3 Pin=Q2-3
+Added Pin To Net: NetName=NetQ2_3 Pin=R6-1
+Added Net: Name=NetQ2_3
+Added Member To Class: ClassName=H_Bridge1 Member=Component Q1 2N3904BU
+Added Member To Class: ClassName=H_Bridge1 Member=Component Q2 2N3904BU
+Added Member To Class: ClassName=H_Bridge1 Member=Component R8 10K
+Added Member To Class: ClassName=H_Bridge1 Member=Component R9 10K
