@@ -1,0 +1,26 @@
+Removed Pin From Net: NetName=OUT1 Pin=J1-N
+Removed Pin From Net: NetName=OUT2 Pin=J1-P
+Removed Pin From Net: NetName=GND Pin=J2-N
+Removed Pin From Net: NetName=VM Pin=J2-P
+Change Component Footprint: Designator=J1 Old Footprint=AMASS_XT60-M New Footprint=PHOENIX_1711725
+Change Component Footprint: Designator=J2 Old Footprint=AMASS_XT60-M New Footprint=PHOENIX_1711725
+Change Component Comment : Designator=J1 Old Comment=XT60-M New Comment=1711725
+Change Component Comment : Designator=J2 Old Comment=XT60-M New Comment=1711725
+Change component parameters: Designator = "J1" ("J1"); Footprint = "AMASS_XT60-M"; UniqueID = "\XTHUKZRT" ("\XTHUKZRT")
+Change component parameters (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/1711725/Phoenix+Contact/view-part/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Phoenix Contact"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "1711725"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/1711725/Phoenix+Contact/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "J2" ("J2"); Footprint = "AMASS_XT60-M"; UniqueID = "\DPQSPTTU" ("\DPQSPTTU")
+Change component parameters (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/1711725/Phoenix+Contact/view-part/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Phoenix Contact"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "1711725"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/1711725/Phoenix+Contact/view-part/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=OUT2 Pin=J1-1
+Added Pin To Net: NetName=OUT1 Pin=J1-2
+Added Pin To Net: NetName=VM Pin=J2-1
+Added Pin To Net: NetName=GND Pin=J2-2
