@@ -2,14 +2,15 @@
 
 A high-performance 2-layer H-Bridge motor driver PCB designed for University Rover Challenge 2026, featuring the Texas Instruments DRV8701 smart gate driver and CSD18532Q5B NexFET power MOSFETs.
 
-![PCB Top Layer](docs/pcb_top.png)
-*PCB Layout - Component Side*
+![PCB 3D](https://github.com/Tawhidy/H-Bridge_using_DRV8701/blob/main/images/ISO_3D.png)
+![PCB Back](https://github.com/Tawhidy/H-Bridge_using_DRV8701/blob/main/images/Back_3D.png)
+*PCB - Component Side*
 
 ---
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
+- [Overview](#🎯overview)
 - [Features](#features)
 - [Specifications](#specifications)
 - [Hardware Components](#hardware-components)
@@ -40,18 +41,14 @@ This H-Bridge motor driver is designed specifically for the **URC 2026** (Univer
 
 ### Application
 
-`[TO BE ADDED: Describe the specific motor/actuator this driver controls in your URC rover - e.g., wheel motors, robotic arm joints, etc.]`
-
+- **(6-24)V Brushed DC Motor**
 ---
 
 ## ✨ Features
 
 ### Motor Control
 - ✅ Bidirectional DC motor control
-- ✅ PWM speed control input
-- ✅ Direction control input
-- ✅ Configurable current limiting (up to 20A)
-- ✅ Fault detection and reporting
+- ✅ PWM speed & direction control input
 
 ### Protection Features
 - ✅ Overcurrent protection (OCP)
@@ -61,10 +58,11 @@ This H-Bridge motor driver is designed specifically for the **URC 2026** (Univer
 - ✅ Sleep mode for low power consumption
 
 ### Design Features
-- ✅ 2-layer PCB for cost-effective manufacturing
-- ✅ XT60 connectors for robust power connections
-- ✅ Compact form factor: `[TO BE ADDED: Board dimensions]`
-- ✅ Optimized thermal management
+- ✅ 2-layer (1 0z) PCB for cost-effective manufacturing
+- ✅ 30A Continuous & 100A Peak
+- ✅ Screw terminal connectors for easy connection
+- ✅ Compact form factor: 65 X 45 mm
+- ✅ Heatsink added for Optimized thermal management
 - ✅ Easy-to-use control interface
 
 ---
@@ -73,34 +71,34 @@ This H-Bridge motor driver is designed specifically for the **URC 2026** (Univer
 
 ### Electrical Specifications
 
-| Parameter | Min | Typ | Max | Unit |
-|-----------|-----|-----|-----|------|
-| **Input Voltage (VM)** | 6.5 | 24 | 47 | V |
-| **Logic Supply (DVDD)** | - | 5 | 5.5 | V |
-| **Continuous Output Current** | - | 15 | 20 | A |
-| **Peak Output Current** | - | - | `[TO BE ADDED]` | A |
-| **PWM Frequency** | - | - | `[TO BE ADDED]` | kHz |
-| **Current Sense Range** | - | 20 | - | A |
-| **Operating Temperature** | -40 | 25 | 125 | °C |
+| Parameter                     | Min | Typ | Max | Unit |
+| ----------------------------- | --- | --- | --- | ---- |
+| **Input Voltage (VM)**        | 6.5 | 18  | 24  | V    |
+| **Logic Supply (DVDD)**       | 2.7 | 3.3 | 5.5 | V    |
+| **Continuous Output Current** | -   | 30  | 100 | A    |
+| **PWM Frequency**             | -   | 25  | 100 | kHz  |
+| **Operating Temperature**     | -40 | 25  | 150 | °C   |
 
 ### Motor Specifications
+(My use case)
 
-| Parameter | Value |
-|-----------|-------|
-| **Motor Type** | Brushed DC |
-| **Rated Voltage** | `[TO BE ADDED]` V |
-| **Rated Current** | `[TO BE ADDED]` A |
-| **Stall Current** | `[TO BE ADDED]` A |
+| Parameter         | Value      |
+| ----------------- | ---------- |
+| **Motor Type**    | Brushed DC |
+| **Rated Voltage** | 12V, 18V   |
+| **Rated Current** | 5A         |
+| **Stall Current** | 8A         |
 
 ### Mechanical Specifications
 
-| Parameter | Value |
-|-----------|-------|
-| **PCB Dimensions** | `[TO BE ADDED]` mm × `[TO BE ADDED]` mm |
-| **PCB Thickness** | 1.6 mm (standard) |
-| **Number of Layers** | 2 |
-| **Mounting Holes** | `[TO BE ADDED]` |
-| **Weight** | `[TO BE ADDED]` g |
+| Parameter               | Value             |
+| ----------------------- | ----------------- |
+| **PCB Dimensions**      | 65 mm × 45 mm     |
+| **PCB Thickness**       | 1.6 mm (standard) |
+| **Number of Layers**    | 2                 |
+| **Mounting Holes**      | 4 (plated - GND)  |
+| **Mounting Dimensions** | 60mm × 40mm       |
+
 
 ---
 
@@ -108,17 +106,20 @@ This H-Bridge motor driver is designed specifically for the **URC 2026** (Univer
 
 ### Bill of Materials (BOM)
 
-| Ref | Qty | Value | Part Number | Description | Package |
-|-----|-----|-------|-------------|-------------|---------|
-| U1 | 1 | DRV8701ERGET | DRV8701ERGET | 47V H-bridge smart gate driver | VQFN-25 |
-| U2, U3, U4, U5 | 4 | CSD18532Q5B | CSD18532Q5B | 60V N-channel NexFET MOSFET | SON-5mm×6mm |
-| C7, C10 | 2 | 470µF/35V | `[TO BE ADDED]` | Bulk capacitor | Radial |
-| C4, C6 | 2 | 1µF | CC0805MKX7R6BB105 | Ceramic capacitor 10V X7R | 0805 |
-| C1, C2, C3, C5, C8, C9 | 6 | 10µF | ECHU1C473JX5 | Ceramic capacitor 16VDC 12% | 1206 |
-| R2, R3, R4 | 3 | 10kΩ | - | Chip resistor ±1% 0.25W | 0805 |
-| R1 | 1 | 33kΩ | - | Chip resistor ±1% 0.25W | 0805 |
-| P1 | 1 | - | MTSW-106-09-T-S-540 | 0.025" SQ post header, 5-pin | Through-hole |
-| J1, J2 | 2 | XT60-M | XT60-M | DC power connector | - |
+| Ref                | Qty | Value                       | Part Number     | Description                                    | Package               |
+| ------------------ | --- | --------------------------- | --------------- | ---------------------------------------------- | --------------------- |
+| U1                 | 1   | DRV8701ERGET                | DRV8701ERGET    | 47V H-bridge smart gate driver                 | VQFN-25               |
+| U2, U3, U4, U5     | 4   | CSD18532Q5B                 | CSD18532Q5B     | 60V N-channel  MOSFET                          | SON-5mm×6mm           |
+| C7, C10            | 2   | 470µF/35V                   | `[TO BE ADDED]` | Electrolytic Cap                               | Radial (through hole) |
+| C1, C2, C3, C8, C9 | 5   | 1µF                         | `[TO BE ADDED]` | MLCC X7R                                       | 1206                  |
+| C4, C6, C11        | 3   | 100nF                       | `[TO BE ADDED]` |                                                | 0805                  |
+| C5                 | 1   | 10µF                        | `[TO BE ADDED]` | MLCC X7R                                       | 1206                  |
+| R2, R3, R4, R8, R9 | 5   | 10kΩ                        | `[TO BE ADDED]` | Chip resistor                                  | 0805                  |
+| R5, R6, R7         | 3   | 1kΩ                         |                 | chip resistor                                  | 0805                  |
+| R1                 | 1   | 500kΩ                       | `[TO BE ADDED]` | Rdrive resistor                                | 1206                  |
+| Q1, Q2             | 2   | Transistor                  | 2N3904          | DC power connector                             | Through-hole          |
+| J1, J2             | 2   | 5.08mm Pitch Screw Terminal |                 | 2.54mm - 6 pin connector (male),<br>single row | Through-hole          |
+| J3                 | 1   | JST-XH                      | JST-XH          | 4Pin - 2.50P connector                         | Through-hole          |
 
 ### Component Notes
 
@@ -143,10 +144,10 @@ This H-Bridge motor driver is designed specifically for the **URC 2026** (Univer
 
 ```
                          ┌─────────────────┐
-    PWM ────────────────►│                 │
-    DIR ────────────────►│   DRV8701      │
-  FAULT ◄────────────────│   Gate Driver  │
-  SLEEP ────────────────►│                 │
+   PWM1 ────────────────►│                 │
+   PWM2 ────────────────►│   DRV8701       │
+    GND ────────────────►│   Gate Driver   │
+    VCC ────────────────►│                 │
                          └────┬──────┬─────┘
                               │      │
                          GH1,GL1  GH2,GL2
@@ -166,9 +167,13 @@ This H-Bridge motor driver is designed specifically for the **URC 2026** (Univer
                          └─────────────────┘
 ```
 
+### Schematics
+Find a PDF of the Schematics in Docs Folder
+
+![PCB Back](https://github.com/Tawhidy/H-Bridge_using_DRV8701/blob/main/images/Schematic.png)
 ### Power Supply Section
 
-The driver accepts input voltage (VM) from **6.5V to 47V** through robust XT60 connectors (J1). Bulk capacitors C7 and C10 (470µF/35V) provide energy storage and filtering for the motor power supply.
+The driver accepts input voltage (VM) from **6.5V to 47V** through robust Terminal connectors (J1). Bulk capacitors C7 and C10 (470µF/35V) provide energy storage and filtering for the motor power supply.
 
 A regulated **5V logic supply (DVDD)** powers the control circuitry and DRV8701 logic. Decoupling capacitors (C1-C6, C8, C9) ensure clean power delivery to both the gate driver and logic sections.
 
@@ -187,29 +192,13 @@ Four **CSD18532Q5B NexFET** MOSFETs form the H-bridge:
 - **U4, U5**: Low-side switches
 
 This configuration enables bidirectional current flow through the motor with low conduction losses.
-
-### Current Sensing
-
-The DRV8701 includes integrated current sensing:
-
-**Current Limit Calculation**:
-```
-VREF = (Ichop × Rsense × 20) + 0.05
-```
-
-For **Ichop = 20A**:
-- VREF is set via resistor divider R2, R3, R4
-- VREF = 4.8V (calculated for 20A current limit)
-- The 20× gain of internal current sense amplifier scales the sense voltage
-
 ### Control Interface
 
 5-pin header (P1) provides:
 1. **+5V**: Logic power supply input
-2. **PWM**: Motor speed control (0-100% duty cycle)
-3. **DIR**: Direction control (HIGH/LOW)
-4. **FAULT**: Active-low fault output
-5. **GND**: Ground reference
+2. **IN1**: Motor speed control (0-100% duty cycle)
+3. **IN2**: Direction control (HIGH/LOW)
+4. **GND**: Ground reference
 
 ---
 
@@ -221,11 +210,11 @@ For **Ichop = 20A**:
 - **Layer Stack**: 
   - **L1 (Top)**: Signal, components, and power routing
   - **L2 (Bottom)**: Ground plane with power routing
-- **Copper Weight**: `[TO BE ADDED: e.g., 1 oz or 2 oz]`
+- **Copper Weight**: 1 oz
 - **Trace Width**: 
-  - Power traces (VM): `[TO BE ADDED]` mm
-  - Signal traces: `[TO BE ADDED]` mm
-- **Clearance**: `[TO BE ADDED]` mm
+  - Power traces (VM): copper pour
+  - Signal traces: 0.3 mm
+- **Clearance**: 0.2 mm
 
 ### Layout Considerations
 
@@ -237,7 +226,6 @@ For **Ichop = 20A**:
 2. **Thermal Management**:
    - MOSFETs positioned for optimal heat dissipation
    - Thermal vias under high-power components
-   - `[TO BE ADDED: Heatsink mounting provisions, if any]`
 
 3. **Signal Integrity**:
    - Gate drive traces kept short to minimize inductance
@@ -247,19 +235,16 @@ For **Ichop = 20A**:
 4. **EMI Mitigation**:
    - Solid ground plane on bottom layer
    - Minimized loop areas in switching paths
-   - `[TO BE ADDED: Additional EMI measures]`
 
 ### Manufacturing Files
 
 The `gerbers/` directory contains all files needed for PCB fabrication:
-- `[TO BE ADDED: List of Gerber files]`
+- Project Output Files Folder
 
 Recommended PCB specifications for ordering:
 - **Material**: FR-4
 - **Thickness**: 1.6mm
-- **Surface Finish**: `[TO BE ADDED: e.g., HASL, ENIG]`
-- **Solder Mask**: `[TO BE ADDED: color]`
-- **Silkscreen**: `[TO BE ADDED: color]`
+- **copper**: 1oz
 
 ---
 
@@ -269,15 +254,6 @@ Recommended PCB specifications for ordering:
 
 The design has been validated using **Texas Instruments TINA-TI** simulation software. The simulation file `slvmb82.TSC` contains the complete circuit model.
 
-### Simulation Results
-
-`[TO BE ADDED: Add key simulation results such as:]`
-- Switching waveforms
-- Current limiting behavior
-- Thermal performance
-- Efficiency curves
-- PWM response
-
 ### Running Simulations
 
 1. Download and install **TINA-TI** from [TI's website](https://www.ti.com/tool/TINA-TI)
@@ -286,91 +262,35 @@ The design has been validated using **Texas Instruments TINA-TI** simulation sof
    - Gate drive timing
    - Current sense accuracy
    - Fault protection triggers
-   - `[TO BE ADDED: Other parameters]`
-
-**Simulation Parameters**:
-```
-[TO BE ADDED: Key simulation parameters like:
-- Input voltage: XX V
-- Load resistance: XX Ω
-- PWM frequency: XX kHz
-- Duty cycle range: XX%
-]
-```
-
+   
 ---
-
-## 🔨 Assembly Instructions
-
-### Prerequisites
-
-- Soldering iron (temperature-controlled recommended)
-- Solder paste (for SMD components)
-- Hot air rework station or reflow oven
-- Tweezers and fine-tip tools
-- Multimeter
-- `[TO BE ADDED: Other tools]`
-
-### Assembly Sequence
-
-1. **SMD Components First**:
-   - Start with smallest components (resistors, small capacitors)
-   - Apply solder paste to pads
-   - Place components using tweezers
-   - Reflow using hot air or oven
-
-2. **Gate Driver IC (U1)**:
-   - Carefully align DRV8701ERGET on pads
-   - Use hot air or reflow to solder
-   - Inspect with magnification for solder bridges
-
-3. **MOSFETs (U2-U5)**:
-   - Align CSD18532Q5B MOSFETs ensuring correct orientation
-   - Reflow solder
-   - Check thermal pad connection
-
-4. **Through-Hole Components**:
-   - Solder bulk capacitors C7, C10
-   - Install XT60 connectors (J1, J2)
-   - Install control header (P1)
-
-5. **Inspection**:
-   - Visual inspection for solder bridges
-   - Continuity testing for power rails
-   - Verify no shorts between VM and GND
-
-### Assembly Tips
-
-- Use thermal relief for ground connections on large pads
-- Ensure proper polarity for electrolytic capacitors C7, C10
-- MOSFETs are directional - verify pinout before soldering
-- Add thermal paste if using heatsinks
-
----
-
 ## 📖 Usage
 
 ### Initial Setup
 
-1. **Visual Inspection**: Verify all components are properly soldered
+1. **Visual Inspection**: Verify all components are properly soldered. **Optimized for Hand Soldering**
 2. **Continuity Check**: Ensure no shorts between power rails
 3. **Power Supply Check**: Verify 5V logic supply is stable
 
-### Connections
-
+### Heatsink Mounting
+Same Process as you would do in Putting a heatsink on a M.2 SSD
+1. Buy a m.2 SSD Heatsink, Preferably copper
+2. Follow the dimension guideline in the File and Drill 2xM3 holes.
+3. Cut the excess part.
+   
+![Heatsink Dimensions](https://github.com/Tawhidy/H-Bridge_using_DRV8701/blob/main/Heatsink/Drawing.png)
 ```
-Control Header (P1):
-├─ Pin 1: +5V  ──────► Connect to 5V logic supply
-├─ Pin 2: PWM  ──────► Connect to MCU PWM output
-├─ Pin 3: DIR  ──────► Connect to MCU GPIO
-├─ Pin 4: FAULT ─────► Connect to MCU GPIO input (with pull-up)
+Control Header (J3):
+├─ Pin 1: VCC  ──────► Connect to 5V logic supply
+├─ Pin 2: IN1  ──────► Connect to MCU PWM output
+├─ Pin 3: IN2  ──────► Connect to MCU GPIO
 └─ Pin 5: GND  ──────► Connect to common ground
 
-Power Input (J1 - XT60):
+Power Input (J1):
 ├─ Positive (+) ─────► Connect to battery/PSU positive
 └─ Negative (-) ─────► Connect to battery/PSU ground
 
-Motor Output (J2 - XT60):
+Motor Output (J2):
 ├─ OUT1 ────────────► Motor terminal 1
 └─ OUT2 ────────────► Motor terminal 2
 ```
@@ -378,28 +298,31 @@ Motor Output (J2 - XT60):
 ### Operating Modes
 
 #### Forward Direction
-- DIR = HIGH
-- PWM = Variable duty cycle (0-100%)
+- IN1 = Variable duty cycle (0-100%)
+- IN2 = 0% (LOW)
 - Current flows: OUT1 → Motor → OUT2
 
 #### Reverse Direction
-- DIR = LOW
-- PWM = Variable duty cycle (0-100%)
+- IN1 = 0% (LOW)
+- IN2 = Variable duty cycle (0-100%)
 - Current flows: OUT2 → Motor → OUT1
 
 #### Brake Mode
-- PWM = 0% (LOW)
-- Both outputs shorted to ground through low-side FETs
+- IN1 = 100% (HIGH)
+- IN2 = 100% (HIGH)
+- Low side slow decay
 
-#### Sleep Mode
-`[TO BE ADDED: Sleep mode control if implemented]`
+#### Coast Mode
+- IN1 = 0% (LOW)
+- IN2 = 0% (LOW)
 
 ### Control Example (Arduino)
 
-```cpp
+```
+cpp
 // Pin definitions
-#define PWM_PIN 9
-#define DIR_PIN 8
+#define IN1 9
+#define IN2 8
 #define FAULT_PIN 7
 
 void setup() {
@@ -408,7 +331,6 @@ void setup() {
   pinMode(FAULT_PIN, INPUT_PULLUP);
   
   // Set PWM frequency (adjust for your motor)
-  // [TO BE ADDED: Specific PWM frequency setting]
 }
 
 void setMotorSpeed(int speed) {
@@ -447,22 +369,6 @@ void loop() {
 }
 ```
 
-### Fault Handling
-
-The FAULT pin goes LOW when:
-- Overcurrent condition detected
-- Thermal shutdown triggered
-- Undervoltage on VM or DVDD
-- `[TO BE ADDED: Other fault conditions]`
-
-**Recommended fault recovery**:
-1. Read FAULT pin state
-2. If LOW, disable PWM output
-3. Wait for fault to clear
-4. Check fault cause (temperature, current, voltage)
-5. Resume operation only after fault is resolved
-
----
 
 ## ✅ Testing and Validation
 
@@ -496,24 +402,15 @@ The FAULT pin goes LOW when:
 
 `[TO BE ADDED: Add actual measured values]`
 
-| Parameter | Expected | Measured | Status |
-|-----------|----------|----------|--------|
-| Quiescent Current (no load) | < 50 mA | `____` mA | ☐ |
-| Maximum Continuous Current | 20 A | `____` A | ☐ |
-| Switching Frequency | XX kHz | `____` kHz | ☐ |
-| Efficiency @ 50% load | > 95% | `____` % | ☐ |
-| Rise Time (10-90%) | < X µs | `____` µs | ☐ |
-| Fall Time (90-10%) | < X µs | `____` µs | ☐ |
-| Temperature Rise @ Full Load | < 40°C | `____` °C | ☐ |
-
-### Test Equipment Required
-
-- Programmable power supply (6.5-47V, >25A capability)
-- Electronic load or test motor
-- Oscilloscope (for waveform analysis)
-- Multimeter
-- Infrared thermometer or thermal camera
-- `[TO BE ADDED: Other equipment]`
+| Parameter                    | Expected | Measured   | Status |
+| ---------------------------- | -------- | ---------- | ------ |
+| Quiescent Current (no load)  | < 50 mA  | `____` mA  | ☐      |
+| Maximum Continuous Current   | 30 A     | `____` A   | ☐      |
+| Switching Frequency          | XX kHz   | `____` kHz | ☐      |
+| Efficiency @ 50% load        | > 95%    | `____` %   | ☐      |
+| Rise Time (10-90%)           | < X µs   | `____` µs  | ☐      |
+| Fall Time (90-10%)           | < X µs   | `____` µs  | ☐      |
+| Temperature Rise @ Full Load | < 40°C   | `____` °C  | ☐      |
 
 ---
 
@@ -548,7 +445,7 @@ h-bridge-motor-driver/
 
 ## 🤝 Contributing
 
-`[TO BE ADDED: Contribution guidelines if this is a team project]`
+Contribution guidelines if this is a team project
 
 Contributions are welcome! Please follow these steps:
 
@@ -562,28 +459,15 @@ Contributions are welcome! Please follow these steps:
 
 ## 📄 License
 
-`[TO BE ADDED: Choose and add appropriate license]`
-
-This project is licensed under the `______` License - see the [LICENSE](LICENSE) file for details.
-
-Recommended licenses for hardware projects:
 - MIT License (permissive)
-- CERN Open Hardware Licence v2 (hardware-specific)
-- Creative Commons (for documentation)
-
 ---
 
 ## 📧 Contact
 
-**Project Team**: `[TO BE ADDED]`
-
-**University**: `[TO BE ADDED]`
-
-**URC 2026 Team**: `[TO BE ADDED]`
-
-**Maintainer**: `[TO BE ADDED: Your name]`
-- Email: `[TO BE ADDED]`
-- GitHub: `[TO BE ADDED]`
+**Project Team**: Project Altair
+**University**: ISLAMIC UNIVERSITY OF TECHNOLOGY (IUT), Gazipur, Dhaka.
+**Maintainer**: Tawhid Alam
+- Email: tawhidalam2001@gmail.com
 
 ---
 
@@ -591,8 +475,6 @@ Recommended licenses for hardware projects:
 
 - Texas Instruments for DRV8701 reference design and TINA-TI simulation software
 - University Rover Challenge organizers
-- `[TO BE ADDED: Team members, advisors, sponsors]`
-
 ---
 
 ## 📚 References
@@ -601,26 +483,25 @@ Recommended licenses for hardware projects:
 2. [CSD18532Q5B Datasheet](https://www.ti.com/product/CSD18532Q5B)
 3. [TINA-TI Simulation Software](https://www.ti.com/tool/TINA-TI)
 4. [DRV8701 Reference Design](https://www.ti.com/lit/pdf/slvmb82) - SLVMB82
-5. `[TO BE ADDED: Additional references]`
 
 ---
 
 ## ⚠️ Safety Notes
 
-- **High Current**: This driver can deliver 20A+ - ensure proper fusing and wire gauge
-- **Reverse Polarity**: Incorrect polarity on VM can damage components
-- **Heat Dissipation**: MOSFETs may require heatsinks at high current
+- **High Current**: This driver can deliver 30A+ - ensure proper fusing and wire gauge
+- **Reverse Polarity**: **No Reverse Polarity Protection**. Incorrect polarity on VM can damage components
+- **Heat Dissipation**: Heatsink Added.
 - **Inductive Load**: Motors generate back-EMF - this driver includes protection
-- **ESD Sensitive**: Use anti-static precautions during assembly
+- **ESD Sensitive**: **Use anti-static precautions during assembly
 
 ---
 
-**Last Updated**: `[TO BE ADDED: Date]`
+**Last Updated**: 17 Mar 2026
 
 **Board Revision**: Rev 1.0
 
-**Status**: `[TO BE ADDED: e.g., Prototype, Tested, Production]`
+**Status**: Prototype Design
 
 ---
 
-*Made with ⚡ for URC 2026*
+*Made with Altium Designer-23 for URC 2026*
