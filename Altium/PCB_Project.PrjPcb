@@ -84,7 +84,7 @@ GenerateClassCluster=0
 DocumentUniqueId=NHKONVUS
 
 [Document3]
-DocumentPath=BOM.BomDoc
+DocumentPath=..\Docs\BOM.BomDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
