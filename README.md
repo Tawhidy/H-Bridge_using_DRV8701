@@ -170,7 +170,10 @@ This H-Bridge motor driver is designed specifically for the **URC 2026** (Univer
 ### Schematics
 Find a PDF of the Schematics in Docs Folder
 
-![PCB Back](https://github.com/Tawhidy/H-Bridge_using_DRV8701/blob/main/Docs/images/Schematic.png)
+![Schematic Preview](https://github.com/Tawhidy/H-Bridge_using_DRV8701/blob/main/Docs/images/Schematic.png)
+
+[📄 Download Full Schematic (PDF)](https://github.com/Tawhidy/H-Bridge_using_DRV8701/blob/main/Docs/images/H_Bridge_sch1.pdf)
+
 ### Power Supply Section
 
 The driver accepts input voltage (VM) from **6.5V to 47V** through robust Terminal connectors (J1). Bulk capacitors C7 and C10 (470µF/35V) provide energy storage and filtering for the motor power supply.
