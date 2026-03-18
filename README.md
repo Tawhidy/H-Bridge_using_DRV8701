@@ -2,8 +2,8 @@
 
 A high-performance 2-layer H-Bridge motor driver PCB designed for University Rover Challenge 2026, featuring the Texas Instruments DRV8701 smart gate driver and CSD18532Q5B NexFET power MOSFETs.
 
-![PCB 3D](https://github.com/Tawhidy/H-Bridge_using_DRV8701/blob/main/images/ISO_3D.png)
-![PCB Back](https://github.com/Tawhidy/H-Bridge_using_DRV8701/blob/main/images/Back_3D.png)
+![PCB 3D](https://github.com/Tawhidy/H-Bridge_using_DRV8701/blob/main/Docs/images/ISO_3D.png)
+![PCB Back](https://github.com/Tawhidy/H-Bridge_using_DRV8701/blob/main/Docs/images/Back_3D.png)
 *PCB - Component Side*
 
 ---
@@ -170,7 +170,7 @@ This H-Bridge motor driver is designed specifically for the **URC 2026** (Univer
 ### Schematics
 Find a PDF of the Schematics in Docs Folder
 
-![PCB Back](https://github.com/Tawhidy/H-Bridge_using_DRV8701/blob/main/images/Schematic.png)
+![PCB Back](https://github.com/Tawhidy/H-Bridge_using_DRV8701/blob/main/Docs/images/Schematic.png)
 ### Power Supply Section
 
 The driver accepts input voltage (VM) from **6.5V to 47V** through robust Terminal connectors (J1). Bulk capacitors C7 and C10 (470µF/35V) provide energy storage and filtering for the motor power supply.
@@ -278,7 +278,7 @@ Same Process as you would do in Putting a heatsink on a M.2 SSD
 2. Follow the dimension guideline in the File and Drill 2xM3 holes.
 3. Cut the excess part.
    
-![Heatsink Dimensions](https://github.com/Tawhidy/H-Bridge_using_DRV8701/blob/main/Heatsink/Drawing.png)
+![Heatsink Dimensions](https://github.com/Tawhidy/H-Bridge_using_DRV8701/blob/main/Hardware/Heatsink/Drawing.png)
 ```
 Control Header (J3):
 ├─ Pin 1: VCC  ──────► Connect to 5V logic supply
